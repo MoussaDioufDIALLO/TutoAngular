@@ -1,0 +1,16 @@
+<form (ngSubmit)="handleAdd(myForm)" #myForm="ngForm">
+<div>
+    Prenom : <input name="prenom" ngModel required minlength="3" #prenom="ngModel">
+    <span style="color: red;" *ngIf="prenom.invalid &&  (prenom.dirty || prenom.touched)">
+     <span *ngIf="prenom.errors?.['required']">Le prenom est obligatoire</span>
+     <span *ngIf="prenom.errors?.['minlength']">Le prenom doit avoir au moins 3 lettres</span>
+    </span>
+</div>
+<div>
+    Nom : <input name="nom" ngModel required #nom="ngModel">
+    <span style="color:red;" *ngIf="nom.invalid && (nom.dirty || nom.touched)">
+        <span *ngIf = "nom.errors?.['required']">Le nom est obligatoire</span>
+    </span>
+</div>
+<div><button type="submit" [disabled]="myForm.invalid">Ajouter</button></div>
+</form>

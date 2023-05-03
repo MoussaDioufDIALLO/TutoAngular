@@ -1,0 +1,19 @@
+{
+  "apprenants": [
+    {
+      "id": 1,
+      "prenom": "Moussa Diouf",
+      "nom": "DIALLO"
+    },
+    {
+      "id": 2,
+      "prenom": "Alain",
+      "nom": "DIATTA"
+    },
+    {
+      "prenom": "Mounir",
+      "nom": "Niang",
+      "id": 3
+    }
+  ]
+}

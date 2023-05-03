@@ -1,0 +1,9 @@
+<app-add-student (studentToAdd)="addStudent($event)" ></app-add-student>
+<h2>Liste des étudiants de {{nom}}</h2>
+<div *ngIf="students.length else loading">
+    <app-student *ngFor="let student of students" [student]="student" 
+    (studentToDelete)="deleteStudent(student)"></app-student>
+</div>
+<ng-template #loading>
+    <div>Loading...</div>
+</ng-template> 
